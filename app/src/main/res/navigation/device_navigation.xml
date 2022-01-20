@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/device_navigation"
+    app:startDestination="@id/bindUserFragment">
+
+    <fragment
+        android:id="@+id/bindUserFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.device.devicefragment.BindUserFragment"
+        android:label="BindUserFragment" >
+        <action
+            android:id="@+id/action_bindUserFragment_to_choiceDeviceFragment"
+            app:destination="@id/choiceDeviceFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_bindUserFragment_to_choiceUserFragment"
+            app:destination="@id/choiceUserFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceDeviceFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.device.devicefragment.ChoiceDeviceFragment"
+        android:label="ChoiceDeviceFragment" >
+        <action
+            android:id="@+id/action_choiceDeviceFragment_to_bindUserFragment"
+            app:destination="@id/bindUserFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceUserFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.device.devicefragment.ChoiceUserFragment"
+        android:label="fragment_choice_user"
+        tools:layout="@layout/fragment_choice_user" >
+        <action
+            android:id="@+id/action_choiceUserFragment_to_bindUserFragment"
+            app:destination="@id/bindUserFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

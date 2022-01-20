@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:cardBackgroundColor="#000000"
+
+        tools:context=".user.fragment.CheckRecordDetailPicFragment">
+
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter">
+
+            <uk.co.senab.photoview.PhotoView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        <View
+            android:layout_below="@+id/shimmer"
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+    </RelativeLayout>
+</layout>

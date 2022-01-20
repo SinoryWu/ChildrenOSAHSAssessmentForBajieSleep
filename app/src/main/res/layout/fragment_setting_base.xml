@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:stateListAnimator="@null"
+            android:id="@+id/edit"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/device_card_button_background"
+            android:text="编辑"
+            android:textColor="#2051BD"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="120dp" />
+
+        <TextView
+            android:id="@+id/textView198"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="139dp"
+            android:text="机构名称："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline41"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView206"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="139dp"
+            android:text="睡眠报告抬头："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline42"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView204"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="201dp"
+            android:text="机构LOGO："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline41"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView207"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="201dp"
+            android:text="睡眠报告LOGO："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline42"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView205"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="301dp"
+            android:text="欢迎语："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline41"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView208"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="301dp"
+            android:text="睡眠报告评估标准："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline42"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView209"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:text="睡眠报告评估建议："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline42"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="640dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="232dp" />
+
+        <TextView
+            android:id="@+id/hospitalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="139dp"
+            tools:text="浙江省儿童医院"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline43"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sleepName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="139dp"
+            tools:text="浙江省儿童医院"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2020版中国指南 / 2014版美国指南"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="@+id/textView208" />
+
+        <TextView
+            android:id="@+id/assessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="智能评估"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="@+id/textView209" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="浙江省儿童医院"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline43"
+            app:layout_constraintTop_toTopOf="@+id/textView205" />
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/hospital_icon_shimmer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="201dp"
+
+            app:layout_constraintCircleRadius="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline43"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.android.liuzhuang.rcimageview.RoundCornerImageView
+                android:id="@+id/hospital_icon_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:rciv_radius="5dp" />
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="804dp" />
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/sleep_icon_shimmer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="201dp"
+
+            app:layout_constraintCircleRadius="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.android.liuzhuang.rcimageview.RoundCornerImageView
+                android:id="@+id/sleep_icon_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:rciv_radius="5dp" />
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        <TextView
+            android:id="@+id/opinion_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="363dp"
+
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/assessment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="562dp"
+
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

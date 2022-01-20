@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_screen_navigation"
+    app:startDestination="@id/userScreenFragment">
+
+    <fragment
+        android:id="@+id/userScreenFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.UserScreenFragment"
+        android:label="fragment_user_screen"
+        tools:layout="@layout/fragment_user_screen" >
+        <action
+            android:id="@+id/action_userScreenFragment_to_userAddScreenFragment"
+            app:destination="@id/userAddScreenFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAddScreenFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.UserAddScreenFragment"
+        android:label="fragment_user_add_screen"
+        tools:layout="@layout/fragment_user_add_screen" >
+        <action
+            android:id="@+id/action_userAddScreenFragment_to_userScreenFragment"
+            app:destination="@id/userScreenFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

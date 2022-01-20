@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_add_user_complete_navigation"
+    app:startDestination="@id/homeAddUserCompleteFragment">
+
+    <fragment
+        android:id="@+id/homeAddUserCompleteFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.HomeAddUserCompleteFragment"
+        android:label="fragment_home_add_user_complete"
+        tools:layout="@layout/fragment_home_add_user_complete" >
+        <action
+            android:id="@+id/action_homeAddUserCompleteFragment_to_homeBindDeviceDeviceFragment2"
+            app:destination="@id/homeBindDeviceDeviceFragment2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeBindDeviceBindFragment2"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.HomeBindDeviceBind2Fragment"
+        android:label="HomeBindDeviceBindFragment">
+        <action
+            android:id="@+id/action_homeBindDeviceBindFragment2_to_homeBindDeviceDeviceFragment2"
+            app:destination="@id/homeBindDeviceDeviceFragment2"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeBindDeviceDeviceFragment2"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.HomeBindDeviceDevice2Fragment"
+        android:label="HomeBindDeviceDeviceFragment">
+        <action
+            android:id="@+id/action_homeBindDeviceDeviceFragment2_to_homeBindDeviceBindFragment2"
+            app:destination="@id/homeBindDeviceBindFragment2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_homeBindDeviceDeviceFragment2_to_homeAddUserCompleteFragment"
+            app:destination="@id/homeAddUserCompleteFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

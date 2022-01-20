@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.activities.ScreenNewTaskActivity">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/fragment_back_icon" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="新增筛查任务"
+            android:textColor="#96ADDF"
+
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="594dp"
+            android:layout_marginTop="322dp"
+
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b11"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b12"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="21dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/line1">
+
+            <Button
+                android:id="@+id/b21"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b22"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="21dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/line2">
+
+            <Button
+                android:id="@+id/b31"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b32"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line4"
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="21dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/line3">
+
+            <Button
+                android:id="@+id/b41"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b42"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <View
+
+            android:id="@+id/view18"
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="311dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="372dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="433dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="433dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="494dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="300dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="554dp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="519dp"
+            android:layout_marginTop="150dp"
+            android:text="筛选问卷"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:text="开始时间"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView93"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="271dp"
+            android:text="结束时间"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView102"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView105"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="332dp"
+            android:text="需要登录"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView103"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView106"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="393dp"
+            android:text="重复提交"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView105"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView107"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="454dp"
+            android:text="展示结果"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView106"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView108"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="515dp"
+            android:text="可以修改"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView107"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView105"
+            app:layout_constraintEnd_toStartOf="@+id/textView105"
+            app:layout_constraintTop_toTopOf="@+id/textView105"
+            app:srcCompat="@mipmap/warning_icon" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView106"
+            app:layout_constraintEnd_toStartOf="@+id/textView106"
+            app:layout_constraintTop_toTopOf="@+id/textView106"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@mipmap/warning_icon" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView107"
+            app:layout_constraintEnd_toStartOf="@+id/textView107"
+            app:layout_constraintTop_toTopOf="@+id/textView107"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@mipmap/warning_icon" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView108"
+            app:layout_constraintEnd_toStartOf="@+id/textView108"
+            app:layout_constraintTop_toTopOf="@+id/textView108"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@mipmap/warning_icon" />
+
+        <TextView
+            android:id="@+id/screen_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="OSA-18"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView93"
+            app:layout_constraintStart_toEndOf="@+id/textView93"
+            app:layout_constraintTop_toTopOf="@+id/textView93" />
+
+        <TextView
+            android:id="@+id/screen_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="2021年12月1日"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView102"
+            app:layout_constraintStart_toEndOf="@+id/textView102"
+            app:layout_constraintTop_toTopOf="@+id/textView102" />
+
+        <TextView
+            android:id="@+id/screen_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="2022年12月1日"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView103"
+            app:layout_constraintStart_toEndOf="@+id/textView103"
+            app:layout_constraintTop_toTopOf="@+id/textView103" />
+
+        <TextView
+            android:id="@+id/changeQuestion"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="732dp"
+            android:layout_marginTop="140dp"
+            android:gravity="center"
+            android:text="更改"
+            android:textColor="#2051BD"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/changeStartTime"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:text="更改"
+            android:textColor="#2051BD"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/changeQuestion"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/changeEndTime"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="261dp"
+            android:gravity="center"
+            android:text="更改"
+            android:textColor="#2051BD"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/changeStartTime"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="490dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/button_confirm_background"
+            android:stateListAnimator="@null"
+            android:text="@string/buttonConfirm"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="490dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/button_cancle_background"
+            android:stateListAnimator="@null"
+            android:text="@string/buttonCancel"
+            android:textColor="#2051BD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

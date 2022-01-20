@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF2F8"
+        tools:context=".frontpagefragment.ScreeningFragment">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadowLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/screening_task_button"
+                    android:stateListAnimator="@null"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:background="@drawable/screen_bar_button_background"
+                    android:text="筛查任务" />
+
+                <Button
+                    android:id="@+id/my_questionnaire_button"
+                    android:stateListAnimator="@null"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:background="@drawable/screen_bar_button_background"
+                    android:layout_toEndOf="@+id/screening_task_button"
+                    android:text="我的问卷" />
+
+                <Button
+                    android:id="@+id/questionnaire_Market_button"
+                    android:stateListAnimator="@null"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/screen_bar_button_background"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@+id/my_questionnaire_button"
+                    android:text="问卷市场" />
+
+                <Button
+                    android:id="@+id/new_task_button"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="958dp"
+
+                    android:background="@drawable/new_task_background"
+                    android:stateListAnimator="@null"
+                    android:text="新增任务"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="710dp"
+            android:layout_marginTop="88dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="460dp"
+                    android:layout_height="620dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/frontScreenSwiperefreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="540dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/screen_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="540dp" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="500dp"
+                android:layout_marginTop="10dp"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="590dp"
+                    android:layout_height="620dp"
+                    android:background="#ffffff">
+
+
+                    <TextView
+                        android:id="@+id/question_title_screen_task"
+                        android:layout_width="396dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="40dp"
+                        android:text=""
+                        android:textColor="#262626"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/QR_code"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/qr_code_icon" />
+
+                    <TextView
+                        android:id="@+id/textView94"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="85dp"
+                        android:text="开始时间："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="85dp"
+                        android:text="结束时间："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="127dp"
+                        android:text="可以修改："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="169dp"
+                        android:text="重复提交："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="211dp"
+                        android:text="浏览次数："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="169dp"
+                        android:text="展示结果："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="211dp"
+                        android:text="已测人次："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView104"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="363dp"
+                        android:text="时间统计"
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="127dp"
+                        android:text="需要登录："
+                        android:textColor="#888888"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView94"
+                        app:layout_constraintStart_toEndOf="@+id/textView94"
+                        app:layout_constraintTop_toTopOf="@+id/textView94" />
+
+                    <TextView
+                        android:id="@+id/needLand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="是"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView96"
+                        app:layout_constraintStart_toEndOf="@+id/textView96"
+                        app:layout_constraintTop_toTopOf="@+id/textView96"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/showResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="是"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView123"
+                        app:layout_constraintStart_toEndOf="@+id/textView123"
+                        app:layout_constraintTop_toTopOf="@+id/textView123"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/measured_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="123次"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView97"
+                        app:layout_constraintStart_toEndOf="@+id/textView97"
+                        app:layout_constraintTop_toTopOf="@+id/textView97"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/browse_times"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="12213次"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView97"
+                        app:layout_constraintStart_toEndOf="@+id/textView101"
+                        app:layout_constraintTop_toTopOf="@+id/textView97"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/repeatSubmission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="否"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView123"
+                        app:layout_constraintStart_toEndOf="@+id/textView100"
+                        app:layout_constraintTop_toTopOf="@+id/textView123"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/canModified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="是"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView96"
+                        app:layout_constraintStart_toEndOf="@+id/textView99"
+                        app:layout_constraintTop_toTopOf="@+id/textView96"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView98"
+                        app:layout_constraintStart_toEndOf="@+id/textView98"
+                        app:layout_constraintTop_toTopOf="@+id/textView98"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <Button
+                        android:id="@+id/edit_task_button"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="253dp"
+                        android:background="@drawable/device_card_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="编辑任务"
+                        android:textColor="#2051BD"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/check_result_button"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="253dp"
+                        android:background="@drawable/device_card_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="查看结果"
+                        android:textColor="#2051BD"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/edit_task_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/statistical_analysis_button"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="253dp"
+                        android:background="@drawable/device_card_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="统计分析"
+                        android:textColor="#2051BD"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/check_result_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/result_export_button"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="253dp"
+                        android:background="@drawable/device_card_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="结果导出"
+                        android:textColor="#2051BD"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/statistical_analysis_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view16"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="323dp"
+                        android:background="#E8E8E8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="710dp"
+            android:layout_marginTop="88dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.lihang.ShadowLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="620dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_question_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="540dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="340dp"
+                android:layout_marginTop="10dp"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="750dp"
+                android:layout_height="620dp">
+                <TextView
+                    android:id="@+id/question_title_my_question"
+                    android:layout_width="410dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    tools:text="问卷的标题最大长度你猜能写多少个字二十个字…"
+                    android:textColor="#262626"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView95"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="85dp"
+                    android:text="问卷简介："
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="149dp"
+                    android:text="分级标准："
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="351dp"
+                    android:text="统计"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/my_question_introduction"
+                    android:layout_width="557dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="153dp"
+                    android:layout_marginTop="85dp"
+                    tools:text="你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/my_question_grading"
+                    android:layout_width="557dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="153dp"
+                    android:layout_marginTop="149dp"
+                    tools:text="你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/my_question_standard"
+                    android:layout_width="557dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="153dp"
+                    android:layout_marginTop="351dp"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜你猜" />
+
+                <Button
+                    android:stateListAnimator="@null"
+                    android:background="@drawable/device_card_button_background"
+                    android:id="@+id/my_question_preview"
+                    android:layout_width="95dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="233dp"
+                    android:text="预览"
+                    android:textColor="#2051BD"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <TextView
+                android:id="@+id/has_quesion_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="已拥有问卷0份"
+                android:textColor="#96ADDF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toStartOf="@+id/guideline13"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="190dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="710dp"
+            android:layout_marginTop="88dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.lihang.ShadowLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/questionMarketOSA"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/user_screen_card_background"
+                    android:contentDescription="@string/home_icon_bind_device">
+
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        android:text="OSA-18"
+                        android:textColor="#2051BD"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="39dp"
+                        android:text="生活质量调查"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/questionnaire_market_osa_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:text="已开通"
+                        android:textColor="#6CC291"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="200dp"
+                android:visibility="gone"
+                app:hl_cornerRadius="40dp"
+                app:hl_shadowColor="@color/shadow"
+                app:hl_shadowLimit="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/questionMarketPSQ"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/user_screen_card_background"
+                    android:contentDescription="@string/home_icon_bind_device">
+
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="39dp"
+                        android:text="儿童睡眠问卷"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        android:text="PSQ"
+                        android:textColor="#2051BD"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/questionnaire_market_psq_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:text=""
+                        android:textColor="#6CC291"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.lihang.ShadowLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/question_market_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,23 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7 "
+    app:cardCornerRadius="5dp"
+    app:cardElevation="30dp">
+   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+       android:id="@+id/home_user_search_refresh"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:minHeight="0dp"
+       android:maxHeight="230dp">
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/home_user_search_recycler_view"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:minHeight="0dp"
+           android:maxHeight="230dp"/>
+   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</androidx.cardview.widget.CardView>

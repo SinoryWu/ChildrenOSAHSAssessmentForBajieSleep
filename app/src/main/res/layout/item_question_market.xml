@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="37dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.lihang.ShadowLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="40dp"
+        app:hl_shadowColor="@color/shadow"
+        app:hl_shadowLimit="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:id="@+id/item_question_market_back"
+            android:background="@drawable/user_screen_card_background"
+            android:contentDescription="@string/home_icon_bind_device">
+
+
+            <TextView
+                android:id="@+id/item_question_market_title"
+                android:layout_width="130dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="48dp"
+                android:gravity="center_horizontal"
+                android:text="OSA-18"
+                android:textColor="#2051BD"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_question_market_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginBottom="39dp"
+                tools:text="生活质量调查"
+
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/item_question_market_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:text="已开通"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:textColor="#6CC291"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.lihang.ShadowLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

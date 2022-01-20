@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="1100dp"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".evaluate.fragment.EvaluateBaseInfoFragment">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="130dp"
+            tools:text="王小明明明"
+            android:maxWidth="90dp"
+            android:textColor="#2051BD"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="64dp"
+            android:text="基本信息"
+            android:textColor="#ff2051bd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/imageView8"
+            android:layout_width="35.65dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_true_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="301dp"
+            android:layout_marginTop="64dp"
+            android:text="家族史"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/textView153"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="424dp"
+            android:layout_marginTop="64dp"
+            android:text="生活质量"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="564dp"
+            android:layout_marginTop="64dp"
+            android:text="既往病史"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="704dp"
+            android:layout_marginTop="64dp"
+            android:text="查体与检验"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="859dp"
+            android:layout_marginTop="64dp"
+            android:text="治疗方案"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+
+            android:id="@+id/imageView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="369dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="508dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="648dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="804dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView113"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="母亲妊娠时睡眠情况："
+
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="199dp"
+            android:text="母亲妊娠期间是否有妊高症："
+
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="259dp"
+            android:text="母亲妊娠期间是否有糖尿病："
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="319dp"
+            android:text="孩子生产时情况："
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView112"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="379dp"
+            android:text="出生时情况："
+
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="439dp"
+            android:text="新生儿期住院史："
+            android:textColor="#ff888888"
+
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="359dp" />
+
+        <Button
+            android:id="@+id/next_page"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/button_confirm_background"
+            android:stateListAnimator="@null"
+            android:text="下一步"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/nav_btn_1"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_2"
+                android:layout_marginStart="20dp"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_3"
+                android:layout_marginStart="20dp"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_4"
+                android:layout_marginStart="20dp"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_5"
+                android:layout_marginStart="20dp"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="392dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="130dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b11"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="不好"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b12"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="一般"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b13"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="较好"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b14"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="良好"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="190dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b21"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b22"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="250dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b31"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="是"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b32"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="否"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="490dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="310dp
+"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b41"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="早产"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b42"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="足月产"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b43"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="过期产"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b44"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="顺产"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b45"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="剖宫产"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="392dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="370dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b51"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="良好"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b52"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="窒息"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b53"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/evaluate_question_button_background"
+                android:stateListAnimator="@null"
+                android:text="出息"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b54"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="抢救史"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="430dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b61"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="无"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b62"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="有"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l7"
+            android:layout_width="196dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="263dp"
+            android:layout_marginTop="430dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/b71"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_true_background"
+                android:stateListAnimator="@null"
+                android:text="无机械通气"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/b72"
+                android:layout_width="98dp"
+                android:layout_height="40dp"
+                android:background="@drawable/question_false_background"
+                android:stateListAnimator="@null"
+                android:text="有机械通气"
+                android:textColor="#C1C1C1"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

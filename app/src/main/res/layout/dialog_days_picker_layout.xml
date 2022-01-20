@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/days_dialog_title"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/set_used_days"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/days_picker_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/days_dialog_title">
+
+        <com.itheima.wheelpicker.WheelPicker
+            android:id="@+id/days_picker_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:wheel_cyclic="true"
+            app:wheel_curved="true"
+            app:wheel_selected_item_position="0"
+            app:wheel_item_text_color="#cccccc"
+            app:wheel_selected_item_text_color="@color/black"
+            app:wheel_atmospheric="true"
+            app:wheel_item_text_size="22sp"
+            app:wheel_indicator_size="300dp" />
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/days_picker_layout">
+
+
+        <TextView
+            android:id="@+id/days_cancelBtn"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/days_submitBtn"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

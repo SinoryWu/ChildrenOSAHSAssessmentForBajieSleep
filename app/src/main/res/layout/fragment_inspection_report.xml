@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="830dp"
+    android:layout_height="700dp"
+    >
+
+    <com.lihang.ShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="40dp"
+        app:hl_shadowColor="@color/shadow"
+        app:hl_shadowLimit="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="750dp"
+            android:layout_height="620dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="670dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="105dp"
+                android:background="#F7F7F7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="40dp"
+                    android:text="时间"
+                    android:textColor="#C1C1C1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="252dp"
+                    android:text="内容"
+                    android:textColor="#C1C1C1" />
+            </LinearLayout>
+            
+            
+
+            <RelativeLayout
+                android:layout_width="670dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/user_report_list_bar_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:stateListAnimator="@null"
+                    android:id="@+id/user_report_bar_sleep"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:text="睡眠报告"
+                    android:background="@drawable/report_list_bar_button_background"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:stateListAnimator="@null"
+                    android:layout_toEndOf="@+id/user_report_bar_sleep"
+                    android:id="@+id/user_report_bar_image"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:text="影像检查"
+                    android:textColor="#C1C1C1"
+                    android:background="@drawable/report_list_bar_button_background"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_toEndOf="@+id/user_report_bar_image"
+                    android:stateListAnimator="@null"
+                    android:id="@+id/user_report_bar_endoscope"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:text="内镜检查"
+                    android:textColor="#C1C1C1"
+                    android:background="@drawable/report_list_bar_button_background"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_toEndOf="@+id/user_report_bar_endoscope"
+                    android:stateListAnimator="@null"
+                    android:id="@+id/user_report_bar_biochemistry"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:text="生化检查"
+                    android:textColor="#C1C1C1"
+                    android:background="@drawable/report_list_bar_button_background"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_toEndOf="@+id/user_report_bar_biochemistry"
+                    android:stateListAnimator="@null"
+                    android:id="@+id/user_report_bar_other"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/report_list_bar_button_background"
+                    android:text="其它"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/user_report_bar_upload"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/user_upload_report_background"
+                    android:stateListAnimator="@null"
+                    android:text="上传报告"
+                    android:textColor="#2051BD"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/user_report_refresh"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/user_report_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.lihang.ShadowLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

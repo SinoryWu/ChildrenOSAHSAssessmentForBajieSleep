@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+
+        android:id="@+id/updateReportMotion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layoutDescription="@xml/activity_update_report_xml_constraintlayout9_scene"
+        tools:context=".user.activities.UpdateReportActivity">
+
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/updateReportMotion2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutDescription="@xml/activity_update_report_xml_updatereportmotion2_scene"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="209dp"
+                    android:text="OAHI："
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/oahi"
+                    android:layout_width="410dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginTop="195dp"
+                    android:background="@drawable/add_treatment_edit_background1"
+                    android:gravity="start"
+                    android:hint="请输入…"
+                    android:inputType="numberDecimal"
+                    android:maxLength="500"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="false"
+                    android:textColorHint="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="195dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/oahi"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/normal"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/treatment_records_normal"
+                        android:stateListAnimator="@null"
+                        android:text="正常"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/light"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/treatment_records_light"
+                        android:stateListAnimator="@null"
+                        android:text="轻度"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/moderate"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/treatment_records_moderate"
+                        android:stateListAnimator="@null"
+                        android:text="中度"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/severe"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/treatment_records_severe"
+                        android:stateListAnimator="@null"
+                        android:text="重度"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/updateBack"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/back"
+                    android:src="@mipmap/fragment_back_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:text="上传报告"
+                    android:textColor="#96ADDF"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/update_report_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1016dp"
+                    android:layout_marginTop="130dp"
+                    android:text="管理医生：李二花"
+                    android:textColor="#C1C1C1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="670dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="130dp"
+                    android:background="@drawable/user_report_list_bar_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/update_report_bar_sleep"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/report_list_bar_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="睡眠报告"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/update_report_bar_image"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/update_report_bar_sleep"
+                        android:background="@drawable/report_list_bar_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="影像检查"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/update_report_bar_endoscope"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/update_report_bar_image"
+                        android:background="@drawable/report_list_bar_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="内镜检查"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/update_report_bar_biochemistry"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/update_report_bar_endoscope"
+                        android:background="@drawable/report_list_bar_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="生化检查"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/update_report_bar_other"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/update_report_bar_biochemistry"
+                        android:background="@drawable/report_list_bar_button_background"
+                        android:stateListAnimator="@null"
+                        android:text="其它"
+                        android:textColor="#C1C1C1"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="14dp"
+                    android:text="内容："
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/update_report_edit_text" />
+
+                <TextView
+                    android:id="@+id/textView73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="49dp"
+                    android:text="附件："
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/update_report_edit_text" />
+
+
+                <EditText
+                    android:id="@+id/update_report_edit_text"
+                    android:layout_width="970dp"
+                    android:layout_height="270dp"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginTop="285dp"
+                    android:background="@drawable/update_report_edit_background"
+                    android:gravity="start"
+                    android:hint="请输入报告内容…"
+                    android:maxLength="500"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="false"
+                    android:textColorHint="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="630dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
+                    android:minWidth="0dp"
+                    app:layout_constraintStart_toStartOf="@+id/update_report_edit_text"
+                    app:layout_constraintTop_toBottomOf="@+id/update_report_edit_text">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/picReclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/update_report_add_image"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/update_report_add_background"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/picReclerView"
+                        android:layout_alignParentBottom="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/picReclerView"
+                        app:layout_constraintStart_toEndOf="@+id/picReclerView">
+
+                        <ImageView
+                            android:id="@+id/imageView23"
+                            android:layout_width="31dp"
+                            android:layout_height="31dp"
+                            app:srcCompat="@mipmap/add_icon" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+                <Button
+                    android:id="@+id/updateReportConfirm"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="490dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/button_confirm_background"
+                    android:stateListAnimator="@null"
+                    android:text="@string/buttonConfirm"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Button
+                    android:id="@+id/updateReportCancel"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="490dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/button_cancle_background"
+                    android:stateListAnimator="@null"
+                    android:text="@string/buttonCancel"
+                    android:textColor="#2051BD"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/update_report_bottom_view"
+                    android:layout_width="450dp"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

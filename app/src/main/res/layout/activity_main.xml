@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#EEF2F8">
+
+        <LinearLayout
+            android:id="@+id/navBar"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:background="@drawable/frontpageleftnavbackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/homeIcon"
+                layout="@layout/home_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="65dp" />
+
+            <include
+                android:id="@+id/userIcon"
+                layout="@layout/user_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+
+            <include
+                android:id="@+id/deviceIcon"
+                layout="@layout/device_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+
+            <include
+                android:id="@+id/evaluateIcon"
+                layout="@layout/evaluate_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+            <include
+                android:id="@+id/screeningIcon"
+                layout="@layout/screening_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+
+
+            <include
+                android:id="@+id/randomVisitIcon"
+                layout="@layout/random_visit_icon"
+                android:layout_width="76dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+
+            <include
+                android:id="@+id/setUp"
+                layout="@layout/set_up_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="1168dp"
+            android:layout_height="798dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/navBar"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

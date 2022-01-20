@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="670dp"
+    android:layout_height="70dp"
+    android:id="@+id/user_follow_up_item_back"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/user_follow_up_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        tools:text="2020/12/12"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/user_follow_up_item_detail"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="558dp"
+        android:background="@drawable/home_report_list_item_button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="详情"
+            android:textColor="#2051BD"
+            android:textSize="14sp" />
+
+        <ImageView
+
+            android:layout_width="7dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="13dp"
+            app:srcCompat="@mipmap/right_blue_arrow" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="224dp" />
+
+    <TextView
+        android:id="@+id/user_follow_up_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="李二花"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline34"
+        app:layout_constraintStart_toStartOf="@+id/guideline34"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="410dp" />
+
+    <TextView
+        android:id="@+id/user_follow_up_oahi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="OAHI：12，重度"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline35"
+        app:layout_constraintStart_toStartOf="@+id/guideline35"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

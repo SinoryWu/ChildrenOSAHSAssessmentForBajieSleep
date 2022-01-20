@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".setting.fragment.SettingAccountFragment">
+
+        <Button
+            android:stateListAnimator="@null"
+            android:id="@+id/addUser"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/device_card_button_background"
+            android:text="添加用户"
+            android:textColor="#2051BD"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="322dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="504dp"
+            android:layout_marginTop="130dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

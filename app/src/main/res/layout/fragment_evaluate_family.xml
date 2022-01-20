@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="1100dp"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".evaluate.fragment.EvaluateFamilyFragment">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="64dp"
+            android:text="基本信息"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="35.65dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="301dp"
+            android:layout_marginTop="64dp"
+            android:text="家族史"
+            android:textColor="#ff2051bd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/textView153"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="424dp"
+            android:layout_marginTop="64dp"
+            android:text="生活质量"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="564dp"
+            android:layout_marginTop="64dp"
+            android:text="既往病史"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="704dp"
+            android:layout_marginTop="64dp"
+            android:text="查体与检验"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="859dp"
+            android:layout_marginTop="64dp"
+            android:text="治疗方案"
+            android:textColor="#C1C1C1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+
+            android:id="@+id/imageView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="369dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_true_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="508dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="648dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="804dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/next_page_false_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/nav_btn_1"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_2"
+                android:layout_marginStart="20dp"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_3"
+                android:layout_marginStart="20dp"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_4"
+                android:layout_marginStart="20dp"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/nav_btn_5"
+                android:layout_marginStart="20dp"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:stateListAnimator="@null"
+                android:background="@null"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_page"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/button_confirm_background"
+            android:stateListAnimator="@null"
+            android:text="下一步"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline23" />
+
+        <Button
+            android:id="@+id/front_page"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/button_cancle_background"
+            android:stateListAnimator="@null"
+            android:text="上一步"
+            android:textColor="#2051BD"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="130dp"
+            tools:text="王小明明明"
+            android:maxWidth="90dp"
+            android:textColor="#2051BD"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="130dp"
+            android:background="#F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="164dp"
+                android:text="祖父"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="祖母"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="外公"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="外婆"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="父亲"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="母亲"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="兄弟"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="姐妹"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/c19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="总数"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout9"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="打鼾"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c11"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c12"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c13"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c14"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c15"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c16"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c17"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c18"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l1"
+            app:layout_constraintTop_toBottomOf="@+id/l1">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="肥胖"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c21"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c22"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c23"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c24"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c25"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c26"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c27"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c28"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l2"
+            app:layout_constraintTop_toBottomOf="@+id/l2">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="高血脂"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c31"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c32"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c33"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c34"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c35"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c36"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c37"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c38"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l3"
+            app:layout_constraintTop_toBottomOf="@+id/l3">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="高血压"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c41"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c42"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c43"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c44"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c45"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c46"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c47"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c48"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l5"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l4"
+            app:layout_constraintTop_toBottomOf="@+id/l4">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="糖尿病"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c51"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c52"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c53"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c54"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c55"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c56"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c57"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c58"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/l6"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l5"
+            app:layout_constraintTop_toBottomOf="@+id/l5">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="肿瘤"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c61"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c62"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c63"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c64"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c65"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c66"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c67"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c68"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/l7"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l6"
+            app:layout_constraintTop_toBottomOf="@+id/l6">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="精神病"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c71"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c72"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c73"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c74"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c75"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c76"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c77"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c78"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t7"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l8"
+            android:layout_width="860dp"
+            android:layout_height="60dp"
+            android:background="#F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/l7"
+            app:layout_constraintTop_toBottomOf="@+id/l7">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:text="家族遗传病"
+                android:textSize="16sp"
+                android:textColor="#888888" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c81"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c82"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c83"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c84"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c85"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c86"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c87"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <com.hzdq.bajiesleepchildrenHD.view.MyCustomCheckbox
+                android:id="@+id/c88"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/check_drawable"
+                android:theme="@style/MyCheckBox"
+                android:button="@null"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/t8"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

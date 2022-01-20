@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bloodImage">血氧图</string>
+    <string name="heatImage">心率图</string>
+    <string name="breathImage">呼吸图</string>
+    <string name="temperatureImage">室温图</string>
+    <string name="Sex">性别</string>
+    <string name="back">返回图标</string>
+    <string name="home_icon_bind_device">绑定设备</string>
+    <string name="home_add_user">添加用户</string>
+    <string name="user_head">用户头像</string>
+    <string name="share">分享</string>
+</resources>

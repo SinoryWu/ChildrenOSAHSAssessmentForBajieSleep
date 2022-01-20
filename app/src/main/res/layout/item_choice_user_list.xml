@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:id="@+id/choice_user_item_name"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="李家乐"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:layout_toRightOf="@+id/choice_user_item_name"
+        android:id="@+id/choice_user_item_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="男"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/choice_user_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:id="@+id/choice_user_item_add_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/choice_user_item_sex"
+        android:layout_marginStart="20dp"
+        android:text="添加时间：2020-02-02"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/choice_user_item_sex"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <View
+        android:layout_below="@+id/choice_user_item_add_time"
+        android:id="@+id/view11"
+        android:layout_width="20dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice_user_item_name" />
+
+    <View
+        android:layout_below="@+id/view11"
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/dotted_line" />
+</RelativeLayout>

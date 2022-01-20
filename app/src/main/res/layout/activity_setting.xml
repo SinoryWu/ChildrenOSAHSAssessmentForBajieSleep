@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:context=".setting.activity.SettingActivity">
+
+
+        <LinearLayout
+            android:id="@+id/content_layout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+        <com.lihang.ShadowLayout
+
+            android:id="@+id/shadowLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="80dp"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="1080dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <include
+                    android:id="@+id/base"
+                    layout="@layout/icon_setting_base_info"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/account"
+                    layout="@layout/icon_setting_account_management"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/password"
+                    layout="@layout/icon_setting_password_management"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/register"
+                    layout="@layout/icon_setting_registration_management"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/data"
+                    layout="@layout/icon_setting_data_export"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/log_out"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="288dp"
+                    android:background="@drawable/new_task_background"
+                    android:stateListAnimator="@null"
+                    android:text="退出登录"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+
+        </com.lihang.ShadowLayout>
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/back"
+            android:src="@mipmap/fragment_back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

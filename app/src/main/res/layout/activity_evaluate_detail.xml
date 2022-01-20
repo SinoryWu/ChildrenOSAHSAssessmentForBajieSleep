@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".evaluate.activity.EvaluateDetailActivity">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/back"
+            android:src="@mipmap/fragment_back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#C1C1C1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/create_time"
+            app:layout_constraintEnd_toStartOf="@+id/create_time"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="管理医生：李二花" />
+
+
+        <TextView
+            android:id="@+id/create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="120dp"
+            android:textColor="#C1C1C1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2020/12/12 22:23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="490dp" />
+
+
+        <TextView
+            android:id="@+id/textView151"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:text="八戒智能评估结果："
+            android:textColor="#2051BD"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/evaluate_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textColor="#2051BD"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView151"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/textView151"
+            tools:text="高风险，建议进一步完善检查" />
+
+        <TextView
+            android:id="@+id/textView154"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="255dp"
+            android:text="OSA-18："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView152"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="297dp"
+            android:text="PSQ："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView157"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="339dp"
+            android:text="OAHI："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView162"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="381dp"
+            android:text="OSAS分级："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView163"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评估意见："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/opinion" />
+
+        <TextView
+            android:id="@+id/textView164"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="治疗方案："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toBottomOf="@+id/opinion" />
+
+        <TextView
+            android:id="@+id/textView165"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="治疗意见："
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/treatment" />
+
+        <TextView
+            android:id="@+id/osa_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView154"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/textView154"
+            tools:text="得分：123分，结果：中等影响" />
+
+        <TextView
+            android:id="@+id/psq_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView152"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/textView152"
+            tools:text="得分：123分，结果：中等影响" />
+
+        <TextView
+            android:id="@+id/oahi_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView157"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/textView157"
+            tools:text="得分：123分，结果：中等影响" />
+
+        <TextView
+            android:id="@+id/osa_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/textView162"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/textView162"
+            tools:text="得分：123分，结果：中等影响" />
+
+        <TextView
+            android:id="@+id/opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxWidth="600dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView163"
+            app:layout_constraintStart_toStartOf="@+id/osa_level"
+            app:layout_constraintTop_toBottomOf="@+id/osa_level"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药" />
+
+        <TextView
+            android:id="@+id/treat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:maxWidth="600dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView164"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toBottomOf="@+id/opinion"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="asdasdasdsa" />
+
+        <TextView
+            android:id="@+id/treatment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:maxWidth="600dp"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toBottomOf="@+id/treat"
+            tools:text="持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药持续吃药" />
+
+        <TextView
+            android:id="@+id/textView166"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="问卷详情"
+            android:textColor="#96ADDF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

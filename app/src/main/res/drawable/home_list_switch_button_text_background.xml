@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="80dp" android:height="40dp" android:state_pressed="false">
+        <solid android:color="#262626" />
+
+    </item>
+
+    <item android:width="80dp" android:height="40dp" android:state_pressed="true">
+        <solid android:color="#FFFFFF" />
+    </item>
+</selector>

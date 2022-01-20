@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_device_navigation"
+    app:startDestination="@id/deviceEditFragment">
+
+    <fragment
+        android:id="@+id/deviceEditFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.device.fragment.DeviceEditFragment"
+        android:label="DeviceEditFragment" >
+        <action
+            android:id="@+id/action_deviceEditFragment_to_deviceRecoveryFragment"
+            app:destination="@id/deviceRecoveryFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceRecoveryFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.device.fragment.DeviceRecoveryFragment"
+        android:label="DeviceRecoveryFragment" >
+        <action
+            android:id="@+id/action_deviceRecoveryFragment_to_deviceEditFragment"
+            app:destination="@id/deviceEditFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

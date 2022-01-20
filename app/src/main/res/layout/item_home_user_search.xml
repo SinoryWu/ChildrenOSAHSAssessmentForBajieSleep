@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="750dp"
+    android:layout_height="68dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f7f7f7"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:id="@+id/home_user_search_item_name"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="29dp"
+        android:gravity="center_vertical"
+        tools:text="李家乐"
+        android:textColor="#262626"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:layout_toRightOf="@+id/home_user_search_item_name"
+        android:id="@+id/home_user_search_item_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="男"
+        android:gravity="center"
+        android:textColor="#262626"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/home_user_search_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:layout_below="@+id/view10"
+        android:id="@+id/home_user_search_item_add_time"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@+id/home_user_search_item_sex"
+        android:layout_marginStart="20dp"
+        android:text="添加时间：2020-02-02"
+        android:gravity="center_vertical"
+        android:textColor="#262626"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/home_user_search_item_sex"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <View
+        android:layout_below="@+id/home_user_search_item_add_time"
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_user_search_item_name" />
+
+    <View
+        android:layout_below="@+id/view11"
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/dotted_line" />
+</RelativeLayout>

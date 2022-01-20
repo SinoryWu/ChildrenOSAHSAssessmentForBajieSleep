@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".user.activities.CheckPSQ_Activity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scrollbars="none"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="824dp"
+                    android:textColor="#C1C1C1"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/question_doctor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/question_doctor" />
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/back"
+                    android:src="@mipmap/fragment_back_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:text="筛查问卷"
+                    android:textColor="#96ADDF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/question_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1016dp"
+                    android:layout_marginTop="130dp"
+                    android:text="管理医生：李二花"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#C1C1C1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="195dp"
+                    android:text="姓名："
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/question_choice_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="169dp"
+                    android:layout_marginTop="185dp"
+                    android:gravity="center_vertical"
+                    android:text="姓名"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="321dp"
+                    android:text="建议："
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="279dp"
+                    android:text="结果："
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView89"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="237dp"
+                    android:textStyle="bold"
+                    android:text="得分："
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="168dp"
+                    android:layout_marginTop="237dp"
+                    android:text="125分"
+                    android:textColor="#262626"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="168dp"
+                    android:layout_marginTop="279dp"
+                    android:text="重度患者"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/advice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="168dp"
+                    android:layout_marginTop="321dp"
+                    android:text="多吃饭多喝水多吃饭多喝水多吃饭多喝水多吃饭多喝水"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="363dp"
+                    android:text="一、呼吸"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二、嗜睡"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line9" />
+
+                <TextView
+                    android:id="@+id/tit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="三、行为"
+                    android:textColor="#C1C1C1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tit2"
+                    app:layout_constraintTop_toBottomOf="@+id/line11" />
+
+                <TextView
+
+                    android:id="@+id/tit4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="四、其他"
+                    android:textColor="#C1C1C1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/t2217"
+                    app:layout_constraintTop_toBottomOf="@+id/line17" />
+
+
+                <TextView
+                    android:id="@+id/textView82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="1/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+                <TextView
+                    android:id="@+id/textView85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="110dp"
+                    android:text="2/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+                <TextView
+                    android:id="@+id/t223"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView85" />
+
+                <TextView
+                    android:id="@+id/t224"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t223" />
+
+                <TextView
+                    android:id="@+id/t225"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="5/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t224" />
+
+                <TextView
+                    android:id="@+id/t226"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t225" />
+
+                <TextView
+                    android:id="@+id/t227"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t226" />
+
+                <TextView
+                    android:id="@+id/t228"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="8/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t227" />
+
+                <TextView
+                    android:id="@+id/t229"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="9/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t228" />
+
+                <TextView
+                    android:id="@+id/t2210"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/22"
+                    android:textColor="#888888"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="40dp
+"
+                    app:layout_constraintTop_toBottomOf="@+id/tit2" />
+
+                <TextView
+                    android:id="@+id/t2211"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="11/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2210" />
+
+                <TextView
+                    android:id="@+id/t2212"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit3" />
+
+                <TextView
+                    android:id="@+id/t2213"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="13/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2212" />
+
+                <TextView
+                    android:id="@+id/t2214"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="14/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2213" />
+
+                <TextView
+                    android:id="@+id/t2215"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="15/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2214" />
+
+                <TextView
+                    android:id="@+id/t2216"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="16/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2215" />
+
+                <TextView
+                    android:id="@+id/t2217"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17/22"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2216" />
+
+                <TextView
+                    android:id="@+id/t2218"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="18/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit4" />
+
+                <TextView
+                    android:id="@+id/t2219"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19/22"
+                    android:textColor="#888888"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2218" />
+
+
+                <TextView
+                    android:id="@+id/t2220"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:textStyle="bold"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2219" />
+
+                <TextView
+                    android:id="@+id/t2221"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21/22"
+                    android:textColor="#888888"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2220" />
+
+                <TextView
+                    android:id="@+id/t2222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="22/22"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2221" />
+
+                <TextView
+
+                    android:id="@+id/textView84"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="40dp"
+                    android:text="睡觉打鼾超过睡眠时间的一半"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView82"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    app:layout_constraintTop_toTopOf="@+id/textView82" />
+
+
+                <TextView
+                    android:id="@+id/t22.2"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="睡觉总是打鼾"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView85"
+                    app:layout_constraintTop_toTopOf="@+id/textView85"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView85" />
+
+                <TextView
+                    android:id="@+id/t22.3"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="睡觉鼾声重"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t223"
+                    app:layout_constraintBottom_toBottomOf="@+id/t223" />
+
+                <TextView
+                    android:id="@+id/t22.4"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="夜间睡觉时呼吸沉重或呼吸声大"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t224"
+                    app:layout_constraintBottom_toBottomOf="@+id/t224" />
+
+                <TextView
+                    android:id="@+id/t22.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="夜间睡觉时呼吸困难或呼吸费力"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t225"
+                    app:layout_constraintBottom_toBottomOf="@+id/t225" />
+
+                <TextView
+                    android:id="@+id/t22.6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="夜间睡眠时观察到孩子有呼吸停止"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t226"
+                    app:layout_constraintBottom_toBottomOf="@+id/t226" />
+
+                <TextView
+                    android:id="@+id/t22.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="白天愿意张嘴呼吸"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t227"
+                    app:layout_constraintBottom_toBottomOf="@+id/t227" />
+
+                <TextView
+                    android:id="@+id/t22.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="早晨睡醒时有口干"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t228"
+                    app:layout_constraintBottom_toBottomOf="@+id/t228" />
+
+                <TextView
+                    android:id="@+id/t22.9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="早上起床时伴头痛"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t229"
+                    app:layout_constraintBottom_toBottomOf="@+id/t229" />
+
+                <TextView
+                    android:id="@+id/t22.10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="白天睡意的困扰或总爱睡懒觉"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2210"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2210" />
+
+                <TextView
+                    android:id="@+id/t22.11"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老师或其他看护人评价孩子白天表现得昏昏欲睡"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2211"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2211" />
+
+                <TextView
+                    android:id="@+id/t22.12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在跟孩子讲话他/她好像心不在焉或没有在听"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2212"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2212" />
+
+                <TextView
+                    android:id="@+id/t22.13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="较难安排活动或任务"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2213"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2213" />
+
+                <TextView
+                    android:id="@+id/t22.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="易被外部的刺激因素分散注意力"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2214"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2214" />
+
+
+                <TextView
+                    android:id="@+id/t22.15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="坐下时总是手脚乱动不安或浑身不适"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2215"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2215" />
+
+                <TextView
+                    android:id="@+id/t22.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="常表现得忙个不停或高谈阔论"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2216"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2216" />
+
+                <TextView
+
+                    android:id="@+id/t22.17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平时总爱打断别人或者抢话说"
+                    android:textStyle="bold"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2217"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2217" />
+
+                <TextView
+                    android:id="@+id/t22.18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="睡觉偶尔尿床"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2218"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2218" />
+
+                <TextView
+                    android:id="@+id/t22.19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="晨起时感觉未得到充分休息"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2219"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2219" />
+
+                <TextView
+                    android:id="@+id/t22.20"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="早上很难叫醒"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2220"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2220" />
+
+
+                <TextView
+                    android:id="@+id/t22.21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="曾有过生长发育停滞"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2221"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2221" />
+
+                <TextView
+                    android:id="@+id/t22.22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="超重"
+                    android:textColor="#C1C1C1"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t2222"
+                    app:layout_constraintBottom_toBottomOf="@+id/t2222" />
+
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="447dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/bb11"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:text="是"
+                        android:textColor="#262626"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bb12"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:text="否"
+                        android:textColor="#262626"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84"
+                    app:layout_constraintTop_toBottomOf="@+id/textView85">
+
+                    <Button
+                        android:id="@+id/b21"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b22"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84"
+                    app:layout_constraintTop_toBottomOf="@+id/t223">
+
+                    <Button
+                        android:id="@+id/b31"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b32"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line4"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t224"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b41"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b42"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line5"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t225"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b51"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b52"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t226"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b61"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b62"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line7"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t227"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b71"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b72"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/line8"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84"
+                    app:layout_constraintTop_toBottomOf="@+id/t228"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b81"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b82"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line9"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t229"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b91"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b92"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line10"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:layout_marginTop="20dp"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/line9"
+                    app:layout_constraintTop_toBottomOf="@+id/t2210">
+
+                    <Button
+                        android:id="@+id/b101"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:text="是"
+                        android:textColor="#262626"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/b102"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:text="否"
+                        android:textColor="#262626"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line11"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84"
+                    app:layout_constraintTop_toBottomOf="@+id/t2211"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b111"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b112"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line12"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/t2212"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b121"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b122"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line13"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2213"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b131"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b132"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line14"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2214"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b141"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b142"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line15"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2215"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b151"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b152"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line16"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2216"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b161"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b162"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/line17"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2217"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b171"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b172"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/line18"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2218"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b181"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b182"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/line19"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2219"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b191"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b192"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line20"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2220"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b201"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b202"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line21"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2221"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b211"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b212"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line22"
+                    android:layout_width="196dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t2222"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView84">
+
+                    <Button
+                        android:id="@+id/b221"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_true_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="是" />
+
+                    <Button
+                        android:id="@+id/b222"
+                        android:layout_width="98dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/check_false_background"
+                        android:stateListAnimator="@null"
+                        android:textColor="#262626"
+                        android:textSize="16sp"
+                        android:text="否" />
+
+
+                </LinearLayout>
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_constraintTop_toBottomOf="@id/line22"
+                    app:layout_constraintEnd_toStartOf="@id/line18" />
+
+                <TextView
+                    android:id="@+id/textView83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="130dp"
+                    android:text="PSQ"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

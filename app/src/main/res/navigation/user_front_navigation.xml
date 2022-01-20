@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_front_navigation"
+    app:startDestination="@id/userBaseInfoFragment">
+    <fragment
+        android:id="@+id/userBaseInfoFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.UserBaseInfoFragment"
+        android:label="fragment_user_base_info"
+        tools:layout="@layout/fragment_user_base_info" />
+    <fragment
+        android:id="@+id/screeningQuestionFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.ScreeningQuestionFragment"
+        android:label="ScreeningQuestionFragment" />
+    <fragment
+        android:id="@+id/inspectionReportFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.InspectionReportFragment"
+        android:label="InspectionReportFragment" />
+    <fragment
+        android:id="@+id/treatmentRecordsFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.TreatmentRecordsFragment"
+        android:label="TreatmentRecordsFragment" />
+    <fragment
+        android:id="@+id/followUpEvaluationFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.FollowUpEvaluationFragment"
+        android:label="FollowUpEvaluationFragment" />
+</navigation>

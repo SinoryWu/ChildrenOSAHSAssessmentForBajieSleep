@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF2F8"
+        tools:context=".frontpagefragment.EvaluateFragment">
+
+        <TextView
+            android:id="@+id/userCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:text="共找到0位用户"
+            android:textColor="#96ADDF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="@+id/shadowLayout4"
+            app:layout_constraintStart_toStartOf="@+id/shadowLayout4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadowLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffffff">
+                <EditText
+                    android:id="@+id/listSearch"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:drawableStart="@mipmap/search_icon"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/home_search_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="40dp"
+                    android:singleLine="true"
+                    android:textColorHint="#C1C1C1"
+                    android:textSize="16sp"
+                    android:imeOptions="actionSearch"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <RelativeLayout
+                    android:id="@+id/cancelSearch"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_cancel_24" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+
+        </com.lihang.ShadowLayout>
+
+
+        <com.lihang.ShadowLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="300dp"
+                android:layout_height="620dp"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.95" />
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/front_evaluate_refresh"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.lihang.ShadowLayout>
+
+
+        <com.lihang.ShadowLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="340dp"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="750dp"
+                android:layout_height="720dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="44dp"
+                    android:text="评估记录"
+                    android:textColor="#ff2051bd"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="670dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="90dp"
+                    android:background="#F7F7F7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:text="时间"
+                        android:textColor="#ffc1c1c1"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:text="OSA分级"
+                        android:textColor="#ffc1c1c1"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="111dp"
+                        android:text="问卷得分"
+                        android:textColor="#ffc1c1c1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/evaluate_record_refresh"
+                    android:layout_width="0dp"
+                    android:layout_height="490dp"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/evaluate_record_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+                <Button
+                    android:id="@+id/add_evaluate"
+                    android:layout_width="95dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/device_card_button_background"
+                    android:stateListAnimator="@null"
+                    android:text="添加评估"
+                    android:textColor="#ff2051bd"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.lihang.ShadowLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

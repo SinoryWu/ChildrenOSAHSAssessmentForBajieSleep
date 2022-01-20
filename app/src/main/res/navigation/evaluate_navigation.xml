@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/evaluate_navigation"
+    app:startDestination="@id/evaluateBaseInfoFragment">
+
+    <fragment
+        android:id="@+id/evaluateBaseInfoFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluateBaseInfoFragment"
+        android:label="fragment_evaluate_base_info"
+        tools:layout="@layout/fragment_evaluate_base_info" >
+        <action
+            android:id="@+id/action_evaluateBaseInfoFragment_to_evaluateFamilyFragment"
+            app:destination="@id/evaluateFamilyFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/evaluateFamilyFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluateFamilyFragment"
+        android:label="fragment_evaluate_family"
+        tools:layout="@layout/fragment_evaluate_family" >
+        <action
+            android:id="@+id/action_evaluateFamilyFragment_to_evaluateLifeQualityFragment"
+            app:destination="@id/evaluateLifeQualityFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_evaluateFamilyFragment_to_evaluateBaseInfoFragment"
+            app:destination="@id/evaluateBaseInfoFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/evaluatePastMedicalFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluatePastMedicalFragment"
+        android:label="EvaluatePastMedicalFragment" >
+        <action
+            android:id="@+id/action_evaluatePastMedicalFragment_to_evaluateInspectFragment"
+            app:destination="@id/evaluateInspectFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_evaluatePastMedicalFragment_to_evaluateLifeQualityFragment"
+            app:destination="@id/evaluateLifeQualityFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/evaluateInspectFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluateInspectFragment"
+        android:label="EvaluateInspectFragment" >
+        <action
+            android:id="@+id/action_evaluateInspectFragment_to_evaluateTreatmentPlanFragment"
+            app:destination="@id/evaluateTreatmentPlanFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_evaluateInspectFragment_to_evaluatePastMedicalFragment"
+            app:destination="@id/evaluatePastMedicalFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/evaluateLifeQualityFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluateLifeQualityFragment"
+        android:label="EvaluateLifeQualityFragment" >
+        <action
+            android:id="@+id/action_evaluateLifeQualityFragment_to_evaluatePastMedicalFragment"
+            app:destination="@id/evaluatePastMedicalFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_evaluateLifeQualityFragment_to_evaluateFamilyFragment"
+            app:destination="@id/evaluateFamilyFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/evaluateTreatmentPlanFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.evaluate.fragment.EvaluateTreatmentPlanFragment"
+        android:label="EvaluateTreatmentPlanFragment" />
+</navigation>

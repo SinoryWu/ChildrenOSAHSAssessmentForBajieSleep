@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_list_navigation"
+    app:startDestination="@id/homeListFragment">
+
+    <fragment
+        android:id="@+id/homeListFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.HomeListFragment"
+        android:label="HomeListFragment" >
+        <action
+            android:id="@+id/action_homeListFragment_to_reportInfoFragment2"
+            app:destination="@id/reportInfoFragment2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportInfoFragment2"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.ReportInfoFragment"
+        android:label="fragment_report_info"
+        tools:layout="@layout/activity_report_info" >
+        <action
+            android:id="@+id/action_reportInfoFragment2_to_homeListFragment"
+            app:destination="@id/homeListFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

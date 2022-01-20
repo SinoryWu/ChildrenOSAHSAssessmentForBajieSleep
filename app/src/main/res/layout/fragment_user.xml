@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF2F8"
+        tools:context=".frontpagefragment.UserFragment">
+
+        <TextView
+            android:id="@+id/userUserCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:text="共找到2134位用户"
+            android:textColor="#96ADDF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline20"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadowLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffffff">
+                <EditText
+                    android:id="@+id/userUserListSearch"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:drawableStart="@mipmap/search_icon"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionSearch"
+                    android:hint="@string/home_search_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="40dp"
+                    android:singleLine="true"
+                    android:textColorHint="#C1C1C1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <RelativeLayout
+                    android:id="@+id/cancelSearch"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_cancel_24" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadowLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="300dp"
+                android:layout_height="620dp"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.95" />
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/front_user_swiperefresh_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/userFragmentRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+
+            android:id="@+id/shadowLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="340dp"
+            app:hl_cornerRadius="40dp"
+            app:hl_shadowColor="@color/shadow"
+            app:hl_shadowLimit="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="750dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/user_bar_info"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/user_bar_button_background"
+                    android:text="@string/baseInfo"
+                    android:textColor="#2051BD"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:stateListAnimator="@null"/>
+
+                <Button
+                    android:id="@+id/user_bar_record"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/user_bar_button_background"
+                    android:text="@string/treatment_records"
+                    android:textColor="#2051BD"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:stateListAnimator="@null"/>
+
+                <Button
+                    android:id="@+id/user_bar_question"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/user_bar_button_background"
+                    android:text="@string/Screening_questionnaire"
+                    android:textColor="#2051BD"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:stateListAnimator="@null"/>
+
+                <Button
+                    android:id="@+id/user_bar_evaluate"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/user_bar_button_background"
+                    android:stateListAnimator="@null"
+                    android:text="随访记录"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/user_bar_report"
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/user_bar_button_background"
+                    android:text="@string/Inspection_report"
+                    android:textColor="#2051BD"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:stateListAnimator="@null"/>
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <include
+            android:id="@+id/user_card_info"
+            layout="@layout/fragment_user_base_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="100dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/user_card_record"
+            layout="@layout/fragment_treatment_records"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/user_card_question"
+            layout="@layout/fragment_screening_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/user_card_evaluate"
+            layout="@layout/fragment_follow_up_evaluation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/user_card_report"
+            layout="@layout/fragment_inspection_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="190dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

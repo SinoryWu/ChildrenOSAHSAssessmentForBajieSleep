@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_check_report_navigation"
+    app:startDestination="@id/checkReportFragment">
+
+    <fragment
+        android:id="@+id/checkReportFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.CheckReportFragment"
+        android:label="CheckReportFragment" >
+        <action
+            android:id="@+id/action_checkReportFragment_to_checkReportDetailPicFragment"
+            app:destination="@id/checkReportDetailPicFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_checkReportFragment_to_checkReportDetailPicFragment2"
+            app:destination="@id/checkReportDetailPicFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkReportDetailPicFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.CheckReportDetailPicFragment"
+        android:label="CheckReportDetailPicFragment" >
+        <action
+            android:id="@+id/action_checkReportDetailPicFragment_to_checkReportFragment"
+            app:destination="@id/checkReportFragment"
+            app:enterAnim="@anim/fragment_fade_exit"
+            app:exitAnim="@anim/fragment_fade_enter"
+            app:popEnterAnim="@anim/fragment_fade_exit"
+            app:popExitAnim="@anim/fragment_fade_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkReportDetailPicFragment2"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.CheckRecordDetailPicFragment"
+        android:label="CheckReportDetailPicFragment" />
+</navigation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7 "
+    app:cardCornerRadius="5dp"
+    app:cardElevation="30dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F6F6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pop_item_sleep_evaluate_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="智能评估"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#262626"
+            android:gravity="center_vertical"
+            android:background="@drawable/pop_item_background"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dotted_line"/>
+
+        <TextView
+            android:id="@+id/pop_item_sleep_evaluate_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="自由编辑"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#262626"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@drawable/pop_item_background"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dotted_line"/>
+        <TextView
+            android:id="@+id/pop_item_sleep_evaluate_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="空白模板"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#262626"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@drawable/pop_item_background"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.android.liuzhuang.rcimageview.RoundCornerImageView
+        android:id="@+id/enclosure_image"
+        android:layout_width="450dp"
+        android:layout_height="253dp"
+        android:maxHeight="253dp"
+        app:rciv_radius="5dp"/>
+
+    <TextView
+        android:id="@+id/enclosure_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textColor="#262626"
+        android:textStyle="bold"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>

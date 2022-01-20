@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">儿童OSA评估</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="evaluate_result">评估结果：</string>
+    <string name="sexy">性别：</string>
+
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/check_treatment_detail_navigation"
+    app:startDestination="@id/checkTreatmentRecordFragment">
+
+    <fragment
+        android:id="@+id/checkTreatmentRecordFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.CheckTreatmentRecordFragment"
+        android:label="CheckTreatmentRecordFragment" >
+        <action
+            android:id="@+id/action_checkTreatmentRecordFragment_to_checkRecordDetailPicFragment"
+            app:destination="@id/checkRecordDetailPicFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkRecordDetailPicFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.user.fragment.CheckRecordDetailPicFragment"
+        android:label="CheckRecordDetailPicFragment"
+        tools:layout="@layout/fragment_check_record_detail_pic" >
+        <action
+            android:id="@+id/action_checkRecordDetailPicFragment_to_checkTreatmentRecordFragment2"
+            app:destination="@id/checkTreatmentRecordFragment"
+            app:enterAnim="@anim/fragment_fade_exit"
+            app:exitAnim="@anim/fragment_fade_enter"
+            app:popEnterAnim="@anim/fragment_fade_exit"
+            app:popExitAnim="@anim/fragment_fade_enter" />
+    </fragment>
+</navigation>

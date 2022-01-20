@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settting_navigation"
+    app:startDestination="@id/settingBaseFragment2">
+    <fragment
+        android:id="@+id/settingBaseFragment2"
+        android:name="com.hzdq.bajiesleepchildrenHD.setting.fragment.SettingBaseFragment"
+        android:label="SettingBaseFragment" />
+    <fragment
+        android:id="@+id/settingAccountFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.setting.fragment.SettingAccountFragment"
+        android:label="fragment_setting_account"
+        tools:layout="@layout/fragment_setting_account" />
+    <fragment
+        android:id="@+id/settingPasswordFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.setting.fragment.SettingPasswordFragment"
+        android:label="fragment_setting_password"
+        tools:layout="@layout/fragment_setting_password" />
+    <fragment
+        android:id="@+id/settingRegisterFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.setting.fragment.SettingRegisterFragment"
+        android:label="fragment_setting_register"
+        tools:layout="@layout/fragment_setting_register" />
+    <fragment
+        android:id="@+id/settingDataFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.setting.fragment.SettingDataFragment"
+        android:label="fragment_setting_data"
+        tools:layout="@layout/fragment_setting_data" />
+</navigation>

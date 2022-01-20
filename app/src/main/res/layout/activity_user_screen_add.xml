@@ -1,0 +1,2065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".user.activities.UserScreenAddActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scrollbars="none"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/back"
+                    android:src="@mipmap/fragment_back_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:text="筛查问卷"
+                    android:textStyle="bold"
+                    android:textColor="#96ADDF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/question_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1016dp"
+                    android:layout_marginTop="130dp"
+                    tools:text="管理医生：李二花"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#C1C1C1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="195dp"
+                    android:text="姓名："
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/question_choice_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="169dp"
+                    android:layout_marginTop="185dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/question_choice_name_button"
+                    android:stateListAnimator="@null"
+                    android:layout_width="95dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="169dp"
+                    android:layout_marginTop="191dp"
+                    android:background="@drawable/device_card_button_background"
+                    android:text="请选择"
+                    android:textColor="#2051BD"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="241dp"
+                    android:text="一、睡眠障碍"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二、身体症状"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+                <TextView
+                    android:id="@+id/tit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三、情绪不佳"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="120dp"
+                    tools:layout_editor_absoluteY="608dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line8"
+                    app:layout_constraintStart_toStartOf="@+id/line2" />
+
+                <TextView
+
+                    android:id="@+id/tit4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="四、白天功能"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="120dp"
+                    tools:layout_editor_absoluteY="718dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line11"
+                    app:layout_constraintStart_toStartOf="@+id/line2" />
+
+                <TextView
+                    android:id="@+id/tit5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="五、影响家人"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/line2"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line14" />
+
+                <TextView
+                    android:id="@+id/textView82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="1/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+                <TextView
+                    android:id="@+id/textView85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="110dp"
+                    android:text="2/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+                <TextView
+                    android:id="@+id/t183"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView85" />
+
+                <TextView
+                    android:id="@+id/t184"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="26dp"
+                    tools:layout_editor_absoluteY="241dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t183" />
+
+                <TextView
+                    android:id="@+id/t185"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="26dp"
+                    tools:layout_editor_absoluteY="361dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit2" />
+
+                <TextView
+                    android:id="@+id/t186"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t185" />
+
+                <TextView
+                    android:id="@+id/t187"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t186" />
+
+
+                <TextView
+                    android:id="@+id/t188"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t187" />
+
+                <TextView
+                    android:id="@+id/t189"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit3" />
+
+                <TextView
+                    android:id="@+id/t1810"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t189" />
+
+                <TextView
+                    android:id="@+id/t1811"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1810" />
+
+                <TextView
+                    android:id="@+id/t1812"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit4" />
+
+                <TextView
+                    android:id="@+id/t1813"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1812" />
+
+                <TextView
+                    android:id="@+id/t1814"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1813" />
+
+                <TextView
+                    android:id="@+id/t1815"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tit5" />
+
+                <TextView
+                    android:id="@+id/t1816"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1815" />
+
+                <TextView
+                    android:id="@+id/t1817"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1816" />
+
+                <TextView
+                    android:id="@+id/t1818"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18/18"
+                    android:textStyle="bold"
+                    android:textColor="#888888"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="467dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView81"
+                    android:layout_marginTop="110dp"
+                    app:layout_constraintTop_toBottomOf="@+id/t1817" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="响亮的鼾声"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    app:layout_constraintTop_toTopOf="@+id/textView82" />
+
+
+                <TextView
+                    android:id="@+id/t18.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="夜间有呼吸暂停现象"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView85"
+                    app:layout_constraintTop_toTopOf="@+id/textView85"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView85" />
+
+                <TextView
+                    android:id="@+id/t18.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="睡眠中有气喘或窒息"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t183"
+                    app:layout_constraintBottom_toBottomOf="@+id/t183" />
+
+                <TextView
+                    android:id="@+id/t18.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="睡眠不安、多动或频繁觉醒"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t184"
+                    app:layout_constraintBottom_toBottomOf="@+id/t184" />
+
+                <TextView
+                    android:id="@+id/t18.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="因鼻塞而张口呼吸"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t185"
+                    app:layout_constraintBottom_toBottomOf="@+id/t185" />
+
+                <TextView
+                    android:id="@+id/t18.6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="反复感冒或上呼吸道感染"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t186"
+                    app:layout_constraintBottom_toBottomOf="@+id/t186" />
+
+                <TextView
+                    android:id="@+id/t18.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="鼻涕较多"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t187"
+                    app:layout_constraintBottom_toBottomOf="@+id/t187" />
+
+                <TextView
+                    android:id="@+id/t18.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吞咽食物困难"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t188"
+                    app:layout_constraintBottom_toBottomOf="@+id/t188" />
+
+                <TextView
+                    android:id="@+id/t18.9"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="情绪多变或常发脾气"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t189"
+                    app:layout_constraintBottom_toBottomOf="@+id/t189" />
+
+                <TextView
+                    android:id="@+id/t18.10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有攻击或多动行为"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1810"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1810" />
+
+                <TextView
+                    android:id="@+id/t18.11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="纪律问题"
+                    android:textColor="#262626"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1811"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1811" />
+
+                <TextView
+                    android:id="@+id/t18.12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="过多的白天睡眠或打盹"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1812"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1812" />
+
+                <TextView
+                    android:id="@+id/t18.13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="注意力难以集中"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1813"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1813" />
+
+                <TextView
+                    android:id="@+id/t18.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="早晨起床困难"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1814"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1814" />
+
+
+                <TextView
+                    android:id="@+id/t18.15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="因上述问题而为孩子的身体健康担忧"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1815"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1815" />
+
+                <TextView
+                    android:id="@+id/t18.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="担心孩子夜间不能得到足够的空气"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1816"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1816" />
+
+                <TextView
+
+                    android:id="@+id/t18.17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="因上述问题影响监护人白天工作"
+                    android:textStyle="bold"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1817"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1817" />
+
+                <TextView
+                    android:id="@+id/t18.18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="因上述问题感到焦虑"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="216dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView82"
+                    android:layout_marginStart="40dp"
+                    app:layout_constraintTop_toTopOf="@+id/t1818"
+                    app:layout_constraintBottom_toBottomOf="@+id/t1818" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="325dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/b11"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b12"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b13"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b14"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b15"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b16"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b17"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView85"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b21"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b22"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b23"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b24"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b25"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b26"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b27"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t183"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b31"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b32"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b33"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b34"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b35"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b36"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b37"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line4"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t184"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b41"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b42"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b43"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b44"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b45"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b46"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b47"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line5"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t185"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b51"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b52"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b53"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b54"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b55"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b56"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b57"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t186"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b61"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b62"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b63"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b64"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b65"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b66"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b67"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line7"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t187"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b71"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b72"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b73"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b74"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b75"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b76"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b77"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line8"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t188"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b81"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b82"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b83"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b84"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b85"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b86"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b87"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line9"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t189"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b91"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b92"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b93"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b94"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b95"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b96"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b97"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line10"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1810"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b101"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b102"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b103"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b104"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b105"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b106"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b107"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line11"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1811"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b111"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b112"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b113"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b114"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b115"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b116"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b117"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line12"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1812"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b121"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b122"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b123"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b124"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b125"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b126"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b127"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line13"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1813"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b131"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b132"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b133"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b134"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b135"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b136"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b137"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line14"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1814"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b141"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b142"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b143"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b144"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b145"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b146"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b147"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line15"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1815"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b151"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b152"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b153"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b154"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b155"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b156"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b157"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line16"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1816"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b161"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b162"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b163"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b164"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b165"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b166"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b167"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line17"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1817"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/b171"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b172"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b173"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b174"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b175"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b176"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b177"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line18"
+                    android:layout_width="1040dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/quesiton_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/t1818"
+                    android:layout_marginTop="20dp">
+
+
+
+                    <Button
+                        android:id="@+id/b181"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="从不" />
+
+                    <Button
+                        android:id="@+id/b182"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎没有" />
+
+                    <Button
+                        android:id="@+id/b183"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="很少的时候" />
+
+                    <Button
+                        android:id="@+id/b184"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="有时" />
+
+                    <Button
+                        android:id="@+id/b185"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="较多的时候" />
+
+                    <Button
+                        android:id="@+id/b186"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="几乎每天" />
+
+                    <Button
+                        android:id="@+id/b187"
+                        android:stateListAnimator="@null"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/question_bar_button_background"
+                        android:text="每天" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:stateListAnimator="@null"
+                    android:id="@+id/addOSAConfirm"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="490dp"
+                    android:background="@drawable/button_confirm_background"
+                    android:text="@string/buttonConfirm"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/line18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="80dp"/>
+
+                <Button
+                    android:id="@+id/addOSACancel"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="490dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_cancle_background"
+                    android:stateListAnimator="@null"
+                    android:text="@string/buttonCancel"
+                    android:textColor="#2051BD"
+                    android:layout_marginTop="80dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_constraintTop_toBottomOf="@id/addOSACancel"
+                    app:layout_constraintEnd_toStartOf="@id/line18"/>
+
+                <TextView
+                    android:id="@+id/textView83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="130dp"
+                    android:text="OSA-18"
+                    android:textColor="#2051BD"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

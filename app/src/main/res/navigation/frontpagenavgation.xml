@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frontpagenavgation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_reportInfoFragment"
+            app:destination="@id/reportInfoFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.UserFragment"
+        android:label="UserFragment" />
+    <fragment
+        android:id="@+id/deviceFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.DeviceFragment"
+        android:label="DeviceFragmenr" />
+    <fragment
+        android:id="@+id/screeningFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.ScreeningFragment"
+        android:label="ScreeningFragment" />
+    <fragment
+        android:id="@+id/evaluateFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.EvaluateFragment"
+        android:label="EvaluateFragment" />
+    <fragment
+        android:id="@+id/randomVisitFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.frontpagefragment.RandomVisitFragment"
+        android:label="fragment_random_visit"
+        tools:layout="@layout/fragment_random_visit" />
+    <fragment
+        android:id="@+id/reportInfoFragment"
+        android:name="com.hzdq.bajiesleepchildrenHD.home.fragment.ReportInfoFragment"
+        android:label="fragment_report_info"
+        tools:layout="@layout/activity_report_info" >
+        <action
+            android:id="@+id/action_reportInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:exitAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_open_enter" />
+    </fragment>
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="17.5dp" android:height="17.5dp" android:state_checked="true" android:drawable="@mipmap/radio_button_true_icon">
+
+    </item>
+    <item android:width="17.5dp" android:height="17.5dp" android:state_checked="false" android:drawable="@mipmap/radio_button_false_icon"/>
+</selector>
