@@ -33,6 +33,7 @@ class UserScreenAdd2Activity : AppCompatActivity() {
     var evaluate = 0
     var addScreen = 0
     var uid = 0
+
     var name = ""
     private var screen = 0
     override fun onCreate(savedInstanceState: Bundle?) {
