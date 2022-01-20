@@ -68,9 +68,6 @@ class UserScreenAdd2Activity : AppCompatActivity() {
 
             userViewModel.uid.value = uid
 
-
-
-
             binding.questionChoiceNameButton.visibility = View.GONE
             binding.questionChoiceName.visibility = View.VISIBLE
 
