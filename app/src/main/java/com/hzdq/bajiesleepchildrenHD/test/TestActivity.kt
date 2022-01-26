@@ -28,6 +28,7 @@ class TestActivity : AppCompatActivity() {
     }
 
 
+
     //分割数组
     private fun splitList(list: MutableList<Int>, groupSize: Int): MutableList<List<Int>>? {
         val length = list.size

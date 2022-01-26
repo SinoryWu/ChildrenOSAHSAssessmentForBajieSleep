@@ -89,7 +89,6 @@ class MainActivity : AppCompatActivity(){
         shp.saveToSp("frontuserkeyword","")
         getUserInfo(retrofitSingleton)
         getUserUid(retrofitSingleton,"")
-
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         homeViewModel.refreshHome.value = 1
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)

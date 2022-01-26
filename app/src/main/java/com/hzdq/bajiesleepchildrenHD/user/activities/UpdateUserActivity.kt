@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.gson.Gson
 import com.hzdq.bajiesleepchildrenHD.R
 import com.hzdq.bajiesleepchildrenHD.TokenDialog
 import com.hzdq.bajiesleepchildrenHD.databinding.ActivityUpdateUserBinding
@@ -25,7 +24,6 @@ import com.hzdq.bajiesleepchildrenHD.utils.HideUI
 import com.hzdq.bajiesleepchildrenHD.utils.Shp
 import com.hzdq.bajiesleepchildrenHD.utils.ToastUtils
 import okhttp3.MediaType
-import okhttp3.MultipartBody
 import okhttp3.Request
 import okhttp3.RequestBody
 import org.json.JSONException
@@ -108,7 +106,6 @@ class UpdateUserActivity : AppCompatActivity() {
         //设置数据
         binding.mzh.setText(mzh)
         binding.name.setText(name)
-
         binding.age.setText("$age")
         binding.phoneNumber.setText(mobile)
         binding.height.setText(height)
@@ -270,16 +267,15 @@ class UpdateUserActivity : AppCompatActivity() {
         })
 
         //随访
-        val mapButton3 = mapOf(
+        val mapFollow = mapOf(
             1 to binding.b31,
             2 to binding.b32,
         )
 
 
         userAddViewMode.needfollow.observe(this, Observer {
-
             updateUserBody.needfollow = it
-            mapButton3.forEach {
+            mapFollow.forEach {
                 it.value.isSelected = false
                 it.value.setTextColor(Color.parseColor("#C1C1C1"))
             }
@@ -342,17 +338,9 @@ class UpdateUserActivity : AppCompatActivity() {
             if (!userAddViewMode.mzh.value.equals("")) {
                 maps["mzh"] = userAddViewMode.mzh.value!! //111
             }
-
-
-
-//                        map["reg_id"] = "18071adc03ca4e71439"
             val url: String = OkhttpSingleton.BASE_URL + "/v2/user/update"
-//            updateUser(retrofitSingleton, updateUserBody)
-
-            Log.d("UpdateUser", "onCreate:$maps ")
             postUpdateUser(url, maps)
 
-//            updateUser(retrofitSingleton,updateUserBody,requestBody)
         }
 
         //删除用户
@@ -362,7 +350,6 @@ class UpdateUserActivity : AppCompatActivity() {
                     override fun onLeftClick() {
 
                     }
-
                     override fun onRightClick() {
                         deleteUser(retrofitSingleton, deleteUserBody)
                     }
@@ -381,70 +368,12 @@ class UpdateUserActivity : AppCompatActivity() {
         ActivityCollector2.removeActivity(this)
         super.onDestroy()
     }
-    /**
-     * 更新用户信息
-     */
-    fun updateUser(
-        retrofitSingleton: RetrofitSingleton,
-        updateUserBody: UpdateUserBody,
-        requestBody: RequestBody
-    ) {
-
-
-        retrofitSingleton.api().postUpdateUser(requestBody).enqueue(object : okhttp3.Callback {
-            override fun onFailure(call: okhttp3.Call, e: IOException) {
-
-            }
-
-            override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
-                val res = response.body()!!.string()
-
-            }
-
-        })
-//            override fun onResponse(
-//                call: Call<Response<DataClassUpdateUser>>,
-//                response: Response<Response<DataClassUpdateUser>>
-//            ) {
-//
-
-////                if(response.body()?.code == 0){
-////                    ToastUtils.showTextToast(this@UpdateUserActivity,"用户编辑成功")
-////                    setResult(RESULT_OK)
-////                    finish()
-////                }else {
-////                    ToastUtils.showTextToast(this@UpdateUserActivity,"${response.body()?.msg}")
-////                }
-//            }
-//
-//            override fun onFailure(call: Call<Response<DataClassUpdateUser>>, t: Throwable) {
-//                ToastUtils.showTextToast(this@UpdateUserActivity,"更新用户网络请求失败")
-
-//            }
-
-//            override fun onResponse(
-//                call: Call<okhttp3.Response>,
-//                response: Response<okhttp3.Response>
-//            ) {
-//                val res = response.body()!!.string()
-
-//            }
-//
-//            override fun onFailure(call: Call<okhttp3.Response>, t: Throwable) {
-//                ToastUtils.showTextToast(this@UpdateUserActivity,"更新用户网络请求失败")
-//            }
-
-//        })
-    }
 
     fun postUpdateUser(url: String, map: Map<String, String>) {
         //1.拿到okhttp对象
-
-
         //2.构造request
         //2.1构造requestbody
         val params = HashMap<String?, Any?>()
-
         val keys: Set<String> = map.keys
         for (key in keys) {
             params[key] = map[key]
@@ -464,24 +393,20 @@ class UpdateUserActivity : AppCompatActivity() {
             .url(url)
             .post(requestBodyJson)
             .build()
+
         //3.将request封装为call
         val call = OkhttpSingleton.ok()?.newCall(request)
 
         //4.执行call
-//        同步执行
-//        Response response = call.execute();
-
         //异步执行
         call?.enqueue(object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {
-
                 runOnUiThread { ToastUtils.showTextToast2(this@UpdateUserActivity, "编辑用户网络请求失败") }
             }
 
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
 
                 val res = response.body()!!.string()
-
                 //封装java对象
                 val dataClassUpdateUser = DataClassUpdateUser()
                 val dataUpdateUser = DataUpdateUser()
@@ -562,7 +487,6 @@ class UpdateUserActivity : AppCompatActivity() {
     /**
      * 删除用户
      */
-
     fun deleteUser(retrofitSingleton: RetrofitSingleton, deleteUserBody: DeleteUserBody) {
         retrofitSingleton.api().postDeleteUser(deleteUserBody)
             .enqueue(object : Callback<DataClassDeleteUser> {

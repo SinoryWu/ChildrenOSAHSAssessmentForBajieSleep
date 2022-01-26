@@ -1,6 +1,5 @@
 package com.hzdq.bajiesleepchildrenHD.randomvisit.activity
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -19,28 +18,35 @@ import com.google.gson.Gson
 import com.hzdq.bajiesleepchildrenHD.R
 import com.hzdq.bajiesleepchildrenHD.TokenDialog
 import com.hzdq.bajiesleepchildrenHD.databinding.ActivityAddRandomVisitBinding
-import com.hzdq.bajiesleepchildrenHD.dataclass.DataAddEvaluate
-import com.hzdq.bajiesleepchildrenHD.dataclass.DataClassAddEvaluate
 import com.hzdq.bajiesleepchildrenHD.dataclass.DataClassAddFollowUp
-import com.hzdq.bajiesleepchildrenHD.dataclass.MessageDateClass
 import com.hzdq.bajiesleepchildrenHD.login.activity.LoginActivity
 import com.hzdq.bajiesleepchildrenHD.randomvisit.dialog.DateVisitDialog
 import com.hzdq.bajiesleepchildrenHD.randomvisit.viewmodel.RandomViewModel
 import com.hzdq.bajiesleepchildrenHD.retrofit.OkhttpSingleton
-import com.hzdq.bajiesleepchildrenHD.screen.dialog.DateStartDialog
 import com.hzdq.bajiesleepchildrenHD.user.activities.UserScreenAdd2Activity
 import com.hzdq.bajiesleepchildrenHD.user.activities.UserScreenAddActivity
 import com.hzdq.bajiesleepchildrenHD.utils.*
 import okhttp3.MediaType
 import okhttp3.Request
 import okhttp3.RequestBody
-import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.util.HashMap
+/**
+ * <pre>
+ *     author : Sinory
+ *     e-mail : 249668399@qq.com
+ *     time   : 2022/01/24
+ *     desc   : Android Developer
+ *     tel    : 15355090637
+ *     version: 1.0.5
+ * </pre>
+ */
 
-const val OSAADD_REQUESTCODE = 4
-const val PSQADD_REQUESTCODE = 5
+const val OSA_ADD_REQUEST_CODE = 4
+const val PSQ_ADD_REQUEST_CODE = 5
+const val FOLLOW_UP_SAVE = "/v2/followupSave"
+
 @RequiresApi(Build.VERSION_CODES.O)
 class AddRandomVisitActivity : AppCompatActivity() {
     private var tokenDialog: TokenDialog? = null
@@ -56,14 +62,11 @@ class AddRandomVisitActivity : AppCompatActivity() {
     private var startMonth =  0
     private var startDay =  0
     private lateinit var shp:Shp
-    val assessment: MutableList<String> = ArrayList()
-
+    private val assessment: MutableList<String> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       binding = DataBindingUtil.setContentView(this,R.layout.activity_add_random_visit)
-
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_add_random_visit)
         shp = Shp(this)
-
         HideUI(this).hideSystemUI()
 
         randomViewModel = ViewModelProvider(this).get(RandomViewModel::class.java)
@@ -76,8 +79,6 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         randomViewModel.patient_id.value = patient_id
         randomViewModel.name.value = name
-        Log.d("patient_id", "onCreate:$patient_id ")
-
 
         binding.cancel.setOnClickListener {
             finish()
@@ -86,11 +87,13 @@ class AddRandomVisitActivity : AppCompatActivity() {
         binding.back.setOnClickListener{
             finish()
         }
+
         binding.doctor.text = "管理医生：${shp.getDoctorName()}"
 
         randomViewModel.name.observe(this, Observer {
             binding.name.text = it
         })
+
         datePicker1 = DatePicker(this)
         datePicker2 = DatePicker(this)
         currentYear = datePicker1?.year!!
@@ -111,18 +114,14 @@ class AddRandomVisitActivity : AppCompatActivity() {
         randomViewModel.day.value = datePicker2!!.dayOfMonth
         randomViewModel.setTime()
 
+        //日期选择器显示今天
         randomViewModel.time.observe(this, Observer {
             binding.t1.text = it
-
             randomViewModel.next.value = date2Stamp2("${it} 00:00:00","yyyy年MM月dd日 HH:mm:ss")?.substring(0,10)
         })
 
-
-
-
+        //日期选择器
         binding.l2.setOnClickListener {
-
-
             if (dateDialog == null){
                 binding.i1.setImageResource(R.mipmap.pupop_up_icon)
                 dateDialog = DateVisitDialog(this,object :DateVisitDialog.ConfirmAction{
@@ -150,6 +149,9 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         }
 
+        setLine1()
+
+        //oahi
         binding.oahi.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -165,8 +167,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         })
 
-        setLine1()
-
+        //身高
         binding.height.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -182,6 +183,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         })
 
+        //体重
         binding.weight.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -197,6 +199,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         })
 
+        //颈围
         binding.neck.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -218,6 +221,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
             randomViewModel.setBmi()
         })
 
+        //BMI
         randomViewModel.bmi.observe(this, Observer {
             if (it.equals("")){
                 binding.bmi.text = "- -"
@@ -226,20 +230,22 @@ class AddRandomVisitActivity : AppCompatActivity() {
             }
         })
 
+        //OSA问卷
         binding.osaButton.setOnClickListener {
             val intent = Intent(this, UserScreenAddActivity::class.java)
             intent.putExtra("evaluate", 1)
             intent.putExtra("uid", randomViewModel.patient_id.value)
             intent.putExtra("name", randomViewModel.name.value)
-            startActivityForResult(intent, OSAADD_REQUESTCODE)
+            startActivityForResult(intent, OSA_ADD_REQUEST_CODE)
         }
 
+        //PSQ问卷
         binding.psqButton.setOnClickListener {
             val intent = Intent(this, UserScreenAdd2Activity::class.java)
             intent.putExtra("evaluate", 1)
             intent.putExtra("uid", randomViewModel.patient_id.value)
             intent.putExtra("name", randomViewModel.name.value)
-            startActivityForResult(intent, PSQADD_REQUESTCODE)
+            startActivityForResult(intent, PSQ_ADD_REQUEST_CODE)
         }
 
         setOsaResult()
@@ -261,20 +267,6 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
         })
 
-
-
-
-
-//        if (randomViewModel.assessment.value.equals("[]")){
-//            maps["assessment"] = ""
-//        }else {
-//            maps["assessment"] = randomViewModel.assessment.value.toString()
-//        }
-//
-//        maps["reason"] = randomViewModel.reason.value.toString()
-//        maps["next"] = randomViewModel.next.value.toString()
-
-
         val map1 = mapOf(
             1 to randomViewModel.patient_id,
             2 to randomViewModel.suspend
@@ -288,6 +280,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
             5 to randomViewModel.assessment
 
         )
+
         binding.confirm.setOnClickListener {
             assessment.clear()
             if (!randomViewModel.osa.value.equals("") && randomViewModel.psq.value.equals("")) {
@@ -348,8 +341,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
 
 
             val map = getMap()
-            val url  = OkhttpSingleton.BASE_URL + "/v2/followupSave"
-
+            val url  = OkhttpSingleton.BASE_URL + FOLLOW_UP_SAVE
             postAddFollowUp(url,map)
         }
 
@@ -361,10 +353,11 @@ class AddRandomVisitActivity : AppCompatActivity() {
         ActivityCollector2.removeActivity(this)
         super.onDestroy()
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
-            OSAADD_REQUESTCODE -> {
+            OSA_ADD_REQUEST_CODE -> {
                 if (resultCode == RESULT_OK) {
                     if (data != null) {
                         randomViewModel.osa.value = "{\"id\":${
@@ -391,7 +384,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
                 }
 
             }
-            PSQADD_REQUESTCODE -> {
+            PSQ_ADD_REQUEST_CODE -> {
                 if (resultCode == RESULT_OK) {
                     if (data != null) {
                         randomViewModel.psq.value = "{\"id\":${
@@ -426,11 +419,6 @@ class AddRandomVisitActivity : AppCompatActivity() {
      * 添加随访记录
      */
     fun postAddFollowUp(url:String,map: HashMap<String, String>) {
-        //1.拿到okhttp对象
-
-
-        //2.构造request
-        //2.1构造requestbody
         val params = HashMap<String?, Any?>()
 
         val keys: Set<String> = map.keys
@@ -442,9 +430,11 @@ class AddRandomVisitActivity : AppCompatActivity() {
         val jsonObject = JSONObject(params)
         val jsonStr = jsonObject.toString()
 
+        //1构造requestbody
         val requestBodyJson =
             RequestBody.create(MediaType.parse("application/json;charset=utf-8"), jsonStr)
 
+        //2.构造request
         val request = Request.Builder()
             .addHeader("User-Agent", shp.getUserAgent())
             .addHeader("token", shp.getToken())
@@ -452,32 +442,24 @@ class AddRandomVisitActivity : AppCompatActivity() {
             .url(url)
             .post(requestBodyJson)
             .build()
+
         //3.将request封装为call
         val call = OkhttpSingleton.ok()?.newCall(request)
 
         //4.执行call
-//        同步执行
-//        Response response = call.execute();
-
         //异步执行
         call?.enqueue(object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {
-
                 runOnUiThread { ToastUtils.showTextToast2(this@AddRandomVisitActivity, "添加随访记录网络请求失败") }
             }
 
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
-
                 val res = response.body()!!.string()
-
-
                 val gson = Gson()
                 val dataClassAddFollowUp: DataClassAddFollowUp = gson.fromJson(res, DataClassAddFollowUp::class.java)
 
                 runOnUiThread {
                     if (dataClassAddFollowUp.code == 0) {
-
-
                         ToastUtils.showTextToast(this@AddRandomVisitActivity,"添加成功")
                         setResult(RESULT_OK)
                         finish()
@@ -527,9 +509,7 @@ class AddRandomVisitActivity : AppCompatActivity() {
         maps["reason"] = randomViewModel.reason.value.toString()
         maps["next"] = randomViewModel.next.value.toString()
         maps["neck"] = randomViewModel.neck.value.toString()
-
         return maps
-
     }
 
 
@@ -605,6 +585,9 @@ class AddRandomVisitActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * 显示OSA评测结果
+     */
     fun setOsaResult() {
         randomViewModel.osa1.observe(this, Observer {
             if (!it.equals("")) {
@@ -617,6 +600,9 @@ class AddRandomVisitActivity : AppCompatActivity() {
         })
     }
 
+    /**
+     * 显示PSQ评测结果
+     */
     fun setPsqResult() {
         randomViewModel.psq1.observe(this, Observer {
             if (!it.equals("")) {

@@ -464,13 +464,10 @@ class SettingActivity : AppCompatActivity() {
         maps["hospitalid"] = shp.getHospitalId().toString() //18158188052
         maps["category"] = "app_report"
         return maps
-
     }
 
     fun postSettingBaseInfo(url: String, map: HashMap<String, String>) {
         //1.拿到okhttp对象
-
-
         //2.构造request
         //2.1构造requestbody
         val params = HashMap<String?, Any?>()
@@ -509,10 +506,7 @@ class SettingActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
-
                 val res = response.body()!!.string()
-
-
                 //封装java对象
                 val dataClassSettingBaseInfo = DataClassSettingBaseInfo()
                 val dataSettingBaseInfo = DataSettingBaseInfo()
@@ -539,7 +533,6 @@ class SettingActivity : AppCompatActivity() {
                         dataSettingBaseInfo.reportLogo = report_logo
                         dataSettingBaseInfo.reportStandard = report_standard
                         dataSettingBaseInfo.reportEvaluate = report_evaluate
-
                         dataClassSettingBaseInfo.data = dataSettingBaseInfo
                     }
 
@@ -571,7 +564,6 @@ class SettingActivity : AppCompatActivity() {
                         }
 
                         if (dataSettingBaseInfo.reportEvaluate.equals("1")) {
-
                             settingViewModel.evaluateContent.value = "睡眠分期分析：已开启\n" +
                                     "睡眠呼吸综述：已开启\n" +
                                     "建议：已开启"
@@ -581,9 +573,11 @@ class SettingActivity : AppCompatActivity() {
                             settingViewModel.evaluateContent.value = ""
                         }
 
-                    }else if (dataClassSettingBaseInfo.code == 10010 || dataClassSettingBaseInfo.code == 10004) {
+                    }else if (dataClassSettingBaseInfo.code == 10010 ||
+                        dataClassSettingBaseInfo.code == 10004) {
                         if (tokenDialog == null) {
-                            tokenDialog = TokenDialog(this@SettingActivity, object : TokenDialog.ConfirmAction {
+                            tokenDialog = TokenDialog(this@SettingActivity,
+                                object : TokenDialog.ConfirmAction {
                                 override fun onRightClick() {
                                     shp.saveToSp("token", "")
                                     shp.saveToSp("uid", "")
@@ -645,7 +639,6 @@ class SettingActivity : AppCompatActivity() {
             it.progress = 0f
         }// 循环设置 layout 状态为初始状态
         binding.password.settingPasswordMotion.transitionToEnd()
-
     }
 
     /**
@@ -656,7 +649,6 @@ class SettingActivity : AppCompatActivity() {
             it.progress = 0f
         }// 循环设置 layout 状态为初始状态
         binding.account.settingAccountMotion.transitionToEnd()
-
     }
 
     /**
@@ -680,17 +672,20 @@ class SettingActivity : AppCompatActivity() {
         addFragment(settingPasswordFragment as SettingPasswordFragment)
         addFragment(settingRegisterFragment as SettingRegisterFragment)
         addFragment(settingDataFragment as SettingDataFragment)
-
     }
 
-
+    /**
+     * 添加fragment对象到fragment数组
+     */
     private fun addToList(fragment: Fragment?) {
         if (fragment != null) {
             fragmentList.add(fragment)
         }
     }
 
-    /*显示fragment*/
+    /**
+     * 显示fragment
+     */
     private fun showFragment(fragment: Fragment) {
         for (frag in fragmentList) {
             if (frag !== fragment) {
@@ -701,9 +696,10 @@ class SettingActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().show(fragment).commit()
     }
 
-    /*添加fragment*/
+    /**
+     * 添加fragment
+     */
     private fun addFragment(fragment: Fragment) {
-
         /*判断该fragment是否已经被添加过  如果没有被添加  则添加*/
         if (!fragment.isAdded) {
             supportFragmentManager.beginTransaction().add(R.id.content_layout2, fragment).commit()
@@ -741,7 +737,6 @@ class SettingActivity : AppCompatActivity() {
         if (settingDataFragment != null) {
             supportFragmentManager.putFragment(outState!!, "DataFragment", settingDataFragment)
         }
-
         super.onSaveInstanceState(outState)
     }
 

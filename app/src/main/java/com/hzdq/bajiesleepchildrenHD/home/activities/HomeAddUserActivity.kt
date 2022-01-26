@@ -56,9 +56,7 @@ class HomeAddUserActivity : AppCompatActivity() {
             5 to homeAddUserViewModel.mobile,
             6 to homeAddUserViewModel.needfollow
         )
-
-
-
+        
         binding.cancel.setOnClickListener {
 
             finish()

@@ -15,13 +15,13 @@ import com.google.gson.Gson
 import com.hzdq.bajiesleepchildrenHD.MainActivity
 import com.hzdq.bajiesleepchildrenHD.R
 import com.hzdq.bajiesleepchildrenHD.databinding.ActivityLoginBinding
-import com.hzdq.bajiesleepchildrenHD.dataclass.MessageDateClass
-import com.hzdq.bajiesleepchildrenHD.dataclass.PasswordDateClass
+import com.hzdq.bajiesleepchildrenHD.dataclass.*
 import com.hzdq.bajiesleepchildrenHD.login.viewmodel.LoginViewModel
 import com.hzdq.bajiesleepchildrenHD.retrofit.OkhttpSingleton
 import com.hzdq.bajiesleepchildrenHD.retrofit.RetrofitSingleton
 import com.hzdq.bajiesleepchildrenHD.utils.*
 import okhttp3.*
+import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.util.*
@@ -32,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var navController: NavController
-
     private lateinit var shp: Shp
     var messageButton: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,14 +44,7 @@ class LoginActivity : AppCompatActivity() {
         ActivityCollector2.addActivity(this)
         HideUI(this).hideSystemUI()
 
-//        val userAgent = System.getProperty("http.agent")
-//
         shp = Shp(this)
-//
-//        shp.saveToSp("user_agent",userAgent)
-//        Log.d("userAgent", "$userAgent ")
-        val retrofitSingleton = RetrofitSingleton.getInstance(this)
-
 
         binding.version.text = "V${getVerName()}"
 
@@ -73,11 +65,12 @@ class LoginActivity : AppCompatActivity() {
             binding.loginCheckbox.isChecked = !binding.loginCheckbox.isChecked
         }
 
-
+        //隐私声明
         binding.loginPrivate.setOnClickListener {
             startActivity(Intent(this,PrivateLinkActivity::class.java))
         }
 
+        //用户协议
         binding.loginUser.setOnClickListener {
             startActivity(Intent(this,UserLinkActivity::class.java))
         }
@@ -307,17 +300,49 @@ class LoginActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 val res = response.body()!!.string()
 
+                //封装对象
+                val passwordDateClass = PasswordDateClass()
+                val passwordData = PasswordData()
+
+                try {
+                    val jsonObject = JSONObject(res)
+                    //第一层解析
+                    val code = jsonObject.optInt("code")
+                    val data = jsonObject.optJSONObject("data")
+                    val msg = jsonObject.optString("msg")
+
+
+                    //第一层封装
+
+                    //第一层封装
+                    passwordDateClass.code = code
+                    passwordDateClass.msg = msg
+                    if (data != null){
+                        val token = data.optString("token")
+                        val uid = data.optInt("uid")
+                        val sessionId = data.optString("sessionId")
+
+                        passwordData.token = token
+                        passwordData.uid = uid
+                        passwordData.sessionId = sessionId
+
+                        passwordDateClass.data = passwordData
+
+
+                    }
+                }catch (e: JSONException){
+                    e.printStackTrace()
+                }
                 runOnUiThread {
-                    val gson = Gson()
-                    val passwordDateClass: PasswordDateClass = gson.fromJson(res, PasswordDateClass::class.java)
+
                     if (passwordDateClass.code == 0) {
-                        passwordDateClass.data.token.let { it1 ->
+                        passwordData.token.let { it1 ->
                             shp.saveToSp(
                                 "token",
                                 it1
                             )
                         }
-                        shp.saveToSp("uid", "${passwordDateClass.data.uid}")
+                        shp.saveToSp("uid", "${passwordData.uid}")
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
                     }else {
